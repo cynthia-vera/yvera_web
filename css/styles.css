@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  grid-area: header;
+  background-color: #e6dad8;
+  padding: 5px 10%;
+}
+.header__logo img {
+  width: 80px;
+}
+.header__menu {
+  margin-left: auto;
+}
+.header__menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header__menu ul li {
+  padding: 0 15px;
+}
+.header__menu a {
+  text-decoration: none;
+  color: #000;
+}
+.header__menu a:hover {
+  opacity: 0.5;
+}
+.carrito-icon {
+  width: 24px;
+}
+
+main {
+  grid-area: main;
+}
+
+.hero {
+  height: 400px;
+  background-image: url("../images/joya_portada.jpg");
+  background-size: cover;
+}
+.contenedor {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+}
+.coleccion {
+  background-color: #eee;
+}
+.coleccion__card {
+  margin: 30px 15px;
+  width: 50%;
+}
+.coleccion__card-imagen {
+  width: 100%;
+  border-radius: 6px;
+}
+.coleccion__card-titulo {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.coleccion__card-accion {
+  border: 2px solid #000;
+  padding: 8px 30px;
+  margin-top: 15px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  grid-area: footer;
+  background-color: #e6dad8;
+  padding: 5px 10%;
+}
+.footer__redes {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer__redes img {
+  width: 30px;
+  margin: 10px;
+}
+.footer__politicas {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  margin-left: auto;
+}
+
+.footer__politicas a {
+  text-decoration: none;
+  margin: 10px;
+  color: #000;
+}
+.footer__politicas a:hover {
+  opacity: 0.5;
+}
+
+/* media queries */
+/* smartphones */
+@media only screen and (max-width: 767px) {
+  .header,
+  .footer {
+    padding: 5px 15px;
+  }
+
+  .contenedor {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .coleccion__card {
+    width: 100%;
+  }
+}
